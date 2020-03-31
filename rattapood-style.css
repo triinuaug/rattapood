@@ -141,8 +141,9 @@ main {
 
 .swiper-container {
 	/*border: 1px solid red;*/
-	width: 920px;
-	height: 300px;
+	max-width: 920px;
+	width: 100%;
+	height: auto;
 }
 .swiper-slide img {
 	width: 100%;
@@ -157,79 +158,53 @@ main {
 	color: #FFA600!important;
 }
 
-
-
-
-.neli {
-	/*border: 1px solid red;*/
-	margin-top: 30px;
-	width: 800px;
-	height: 530px;
-	display: flex;
-	flex-direction: column;
+.container {
+	max-width: 800px;
 }
 
-.neliüks {
-	/*border: 1px solid red;*/
-	width: 800px;
-	height: 250px;
-	display: flex;
-	justify-content: space-between;
+@media only screen and (max-width: 960px) {
+	.container {
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+}
+
+.neli {
+	display: grid;
+	grid-column-gap: 30px;
+	grid-row-gap: 30px;	
+	grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+	grid-auto-flow: dense;
+	justify-content: center;
+	margin: auto;
+	margin-top: 30px;
 }
 
 .neli img {
 	/*border: 1px solid red;*/
-	width: 375px;
+	width: 100%;
 	height: 250px;
 	object-fit: cover;
 }
 
-.nelikaks {
-	/*border: 1px solid red;*/
-	margin-top: 30px;
-	width: 800px;
-	height: 250px;
-	display: flex;
-	justify-content: space-between;
-}
-
-
-
-
-
 .kuus {
-	/*border: 1px solid red;*/
+	display: grid;
+	grid-column-gap: 30px;
+	grid-row-gap: 30px;	
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	grid-auto-flow: dense;
+	justify-content: center;
+	margin: auto;
 	margin-top: 30px;
-	width: 800px;
-	height: 370px;
-	margin-bottom: 30px;
-}
-
-.kuusüks {
-	/*border: 1px solid red;*/
-	width: 800px;
-	height: 165px;
-	display: flex;
-	justify-content: space-between;
+	margin-bottom: 40px;
 }
 
 .kuus img {
 	/*border: 1px solid red;*/
-	width: 250px;
+	width: 100%;
 	height: 165px;
 	object-fit: cover;
 }
-
-.kuuskaks {
-	/*border: 1px solid red;*/
-	margin-top: 30px;
-	width: 800px;
-	height: 165px;
-	display: flex;
-	justify-content: space-between;
-}
-
-
 
 .kuus a {
 	position: relative;
@@ -349,27 +324,30 @@ footer h1 {
 }
 
 .pildid {
-	/*border: 1px solid red;*/
-	width: 920px;
-	height: 670px;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
+	max-width: 920px;
+}
+
+@media only screen and (max-width: 960px) {
+	.pildid {
+		padding-left: 18px;
+		padding-right: 18px;
+	}
 }
 
 .rida {
-	/*border: 1px solid red;*/
+	display: grid;
+	grid-column-gap: 20px;
+	grid-row-gap: 30px;	
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	grid-auto-flow: dense;
+	justify-content: center;
+	margin: auto;
 	margin-top: 30px;
-	width: 880px;
-	height: 195px;
-	display: flex;
-	justify-content: space-between;
 }
 
 .pildid img {
 	border: 2px solid #FFA600;
-	width: 280px;
+	width: 100%;
 	height: 195px;
 	object-fit: cover;
 }
@@ -542,8 +520,17 @@ button:focus {
 }
 
 @media only screen and (max-width: 768px) {
-	.kast {
-		width: 200px;
+	.sisu {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.pealkiri {
+		padding-bottom: 30px;
+	}
+	.ikoonid {
+		padding-top: 30px;
 	}
 	.lingid {
 		background-color: #FFA600;
@@ -554,13 +541,7 @@ button:focus {
 		align-items: center;
 	}
 	.info div {
-		margin-right: 15px;
-		margin-left: 15px;
-	}
-}
-
-@media only screen and (max-width: 547px) {
-	.pealkiri {
-		padding-top: 38px;
+		margin-right: 5px;
+		margin-left: 5px;
 	}
 }
