@@ -550,6 +550,7 @@ button:focus {
 		font-size: 90%;
 	}
 	.info h2 {
+		width: 75px;
 		font-size: 120%;
 	}
 }
