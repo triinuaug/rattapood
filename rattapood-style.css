@@ -44,6 +44,7 @@ header {
 .pealkiri {
 	margin: auto;
 	padding-top: 8px;
+	padding-left: 30px;
 	padding-right: 50px;
 	font-size: 130%;
 	font-weight: 400;
@@ -87,6 +88,7 @@ header {
 .ikoonid {
 	margin: auto;
 	padding-left: 50px;
+	padding-right: 30px;
 }
 
 .ikoonid img {
@@ -112,8 +114,8 @@ main {
 }
 
 .lingid {
-	margin-top: 30px;
-	margin-bottom: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 	max-width: 1000px;
 	/*border: 1px solid red;*/
 }
@@ -466,6 +468,7 @@ footer h1 {
 	width: 25px;
 	background-color: #FFA600;
 	border: 2px solid white;
+	margin-right: 10px;
 }
 
 .kastike input:checked ~.linnuke {
@@ -473,19 +476,21 @@ footer h1 {
 	border: 2px solid #FFA600;
 }
 
-.linnuke:After {
+.linnuke:after {
 	content: "";
 	display: none;
 }
 
-.kastike input:checked ~.checkmark:after {
+.kastike input:checked ~.linnuke:after {
 	display: block;
 }
 
 .kastike .linnuke:after {
-	width: 5px;
+	margin-left: 7px;
+	margin-top: 3px;
+	width: 7px;
 	height: 10px;
-	border: solid white;
+	border: solid #FFA600;
 	border-width: 0 3px 3px 0;
 	-webkit-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
@@ -509,4 +514,53 @@ footer h1 {
 .signin button:hover {
 	background-color: white;
 	color: #FFA600;
+}
+
+
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+@media only screen and (max-width: 960px) {
+	.kast {
+		width: 250px;
+	}
+	
+	.lingid span {
+		display: none;
+	}
+	.info div {
+		margin-right: 30px;
+		margin-left: 30px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.kast {
+		width: 200px;
+	}
+	.lingid {
+		background-color: #FFA600;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.info div {
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+}
+
+@media only screen and (max-width: 547px) {
+	.pealkiri {
+		padding-top: 50px;
+	}
 }
