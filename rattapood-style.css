@@ -544,9 +544,9 @@ button:focus {
 		align-items: center;
 	}
 	.info div {
-		margin-right: 8px;
-		margin-left: 8px;
-		width: 80px;
+		margin-right: 7.5px;
+		margin-left: 7.5px;
+		width: 75px;
 		font-size: 90%;
 	}
 	.info h2 {
