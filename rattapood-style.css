@@ -532,6 +532,9 @@ button:focus {
 	.ikoonid {
 		padding-top: 30px;
 	}
+	.kast {
+		width: 275px;
+	}
 	.lingid {
 		background-color: #FFA600;
 		width: 100%;
@@ -541,7 +544,8 @@ button:focus {
 		align-items: center;
 	}
 	.info div {
-		margin-right: 5px;
-		margin-left: 5px;
+		margin-right: 8px;
+		margin-left: 8px;
+		width: 80px;
 	}
 }
