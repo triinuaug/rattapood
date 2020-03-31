@@ -229,6 +229,27 @@ main {
 	transform: scale(1.1);
 }
 
+@media only screen and (max-width: 380px) {
+	.neli {
+		display: grid;
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;	
+		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+		grid-auto-flow: dense;
+		justify-content: center;
+		margin: auto;
+		margin-top: 30px;
+	}
+	
+	.neli img {
+		/*border: 1px solid red;*/
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+	}	
+}
+
+
 
 /* FOOTER */
 
@@ -321,6 +342,7 @@ footer h1 {
 	font-size: 150%;
 	margin-bottom: 20px;
 	padding-right: 0px;
+	padding-left: 0px;
 }
 
 .pildid {
@@ -395,6 +417,7 @@ footer h1 {
 	font-size: 150%;
 	margin-bottom: 30px;
 	padding-right: 0px;
+	padding-left: 0px;
 }
 
 .signin h2 {
@@ -543,14 +566,27 @@ button:focus {
 		justify-content: center;
 		align-items: center;
 	}
+	
+	.lingid a:hover {
+		color: white;
+	}
 	.info div {
 		margin-right: 7.5px;
 		margin-left: 7.5px;
 		width: 75px;
-		font-size: 90%;
+		font-size: 85%;
 	}
 	.info h2 {
 		width: 75px;
-		font-size: 120%;
+		font-size: 115%;
+	}
+}
+
+@media only screen and (max-width: 380px) {
+	.shops h1 {
+		font-size: 135%;
+	}
+	.signin h1 {
+		font-size: 135%;
 	}
 }
